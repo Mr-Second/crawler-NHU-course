@@ -93,7 +93,7 @@ class NanhuaUniversityCrawler
             required: data[6],    # 必修或選修
             department: dep_n,    # 開課系所
             # department_code: dep_c,
-            # note: data[11] && data[14],    # data[11]是開課對象, [14]是備註
+            # note: data[11], data[14],    # data[11]是開課對象, [14]是備註
             day_1: course_days[0],
             day_2: course_days[1],
             day_3: course_days[2],
