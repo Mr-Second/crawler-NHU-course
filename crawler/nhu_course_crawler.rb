@@ -87,10 +87,10 @@ class NanhuaUniversityCrawler
             name: data[2],    # 課程名稱
             lecturer: data[5],    # 授課教師
             credits: data[7],    # 學分數
-            code: "#{@year}-#{@term}-#{data[1].scan(/\d+/)[0]}-?(#{data[0]})?",
+            code: "#{@year + 1911}-#{@term}-#{data[1].scan(/\d+/)[0]}-?(#{data[0]})?",
             # general_code: old_course.cos_code,    # 選課代碼
             url: syllabus_url,    # 課程大綱之類的連結
-            required: data[6],    # 必修或選修
+            required: data[6].include?('必'),    # 必修或選修
             department: dep_n,    # 開課系所
             # department_code: dep_c,
             # note: data[11], data[14],    # data[11]是開課對象, [14]是備註
